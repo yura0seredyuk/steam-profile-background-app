@@ -1,0 +1,25 @@
+{
+  "name": "steam-profile-background-app",
+  "version": "1.0.0",
+  "description": "Steam profile background",
+  "main": "server.js",
+  "scripts": {
+    "backend-install": "npm install",
+    "frontend-install": "cd frontend && npm install",
+    "server-start": "nodemon server.js",
+    "frontend-start": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server-start\" \"npm run frontend-start\"",
+    "start": "node server.js",
+    "prod": "concurrently \"npm run start\" \"npm run frontend-start\""
+  },
+  "keywords": [],
+  "author": "Yura Seredyuk <yura.seredyuk0@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
