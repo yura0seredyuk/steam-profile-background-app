@@ -19,7 +19,6 @@ function App() {
         <Switch>
           <Route path="/admin">{auth ? <AuthAdmin/> : <Admin setAuth={setAuth}/>}</Route>
           <Route path="/"><Client/></Route>
-          {/* <Route exact path="/admin" component={() => auth ? <AuthAdmin/> : <Admin setAuth={setAuth}/>}/> */}
         </Switch>
       </Router>
     </>
