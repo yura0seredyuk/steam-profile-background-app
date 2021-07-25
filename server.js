@@ -23,8 +23,27 @@ mongoose.connection.on('error', err => {
 })
 
 mongoose.connection.on("connected", (err, res) => {
-  console.log("mongoose is connected")
+  console.log("mongoose is connected");
 })
+
+// example
+
+const usersSchema = new mongoose.Schema({ name: { type: String, require: true } });
+const Users = mongoose.model('Users', usersSchema);
+
+app.get('/u',(req, res) => {
+  // Users.create({
+  //   name: 'Denis'
+  // })
+  // .then((user) => res.send(user)) 
+  // .catch(err => res.send(err))
+  Users.find()
+    .then(user => res.send(user))
+    .catch(err => res.send(err))
+})
+
+//
+
 
 const PORT = process.env.PORT || 4000;
 
