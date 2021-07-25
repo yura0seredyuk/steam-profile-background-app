@@ -1,6 +1,8 @@
 import './Client.scss';
 import Customers from './components/Customers/Customers';
 import Users from './components/Users/Users';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import {
   BrowserRouter as Router,
@@ -10,14 +12,16 @@ import {
 
 function App() {
   return (
-    <div>
+    <>
+      <Header/>
       <Router>
         <Switch>
           <Route path="/customers"><Customers/></Route>
           <Route path="/users"><Users/></Route>
         </Switch>
       </Router>
-    </div>
+      <Footer/>
+    </>
   );
 }
 
