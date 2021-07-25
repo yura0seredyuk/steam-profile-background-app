@@ -13,8 +13,9 @@ function App() {
     <>
       <Router>
         <Switch>
-         <Route path="/admin"><Admin/></Route>
-          <Route path="/"><Client/></Route>
+          <Route exact path="/" component={Client}/>
+          <Route exact path="/admin" component={Admin}/>
+          <Route path="*" component={() => <h1>404 page</h1>}/>
         </Switch>
       </Router>
     </>
