@@ -17,9 +17,9 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={Client}/>
-          <Route exact path="/admin" component={() => auth ? <AuthAdmin/> : <Admin setAuth={setAuth}/>}/>
-          <Route path="*" component={() => <h1>404 page</h1>}/>
+          <Route path="/admin">{auth ? <AuthAdmin/> : <Admin setAuth={setAuth}/>}</Route>
+          <Route path="/"><Client/></Route>
+          {/* <Route exact path="/admin" component={() => auth ? <AuthAdmin/> : <Admin setAuth={setAuth}/>}/> */}
         </Switch>
       </Router>
     </>
