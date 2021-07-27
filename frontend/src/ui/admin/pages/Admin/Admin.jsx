@@ -17,7 +17,7 @@ export default function Admin({ setAuth }) {
 
   return (
     <div>
-      <p>Admin page</p>
+      <p className='admin_title'>Admin page</p>
       <form action="/admin" name='login' onSubmit={(event) => check(event, login, password)}>
         <input type="text" name='login' value={login} onChange={(event) => setLogin(event.target.value)} required/>
         <input type="password" name='password' value={password} onChange={(event) => setPassword(event.target.value)} required/>
