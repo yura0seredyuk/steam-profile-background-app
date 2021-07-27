@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import './Admin.scss';
 
 export default function Admin({ setAuth }) {
   const [login, setLogin] = useState('');
